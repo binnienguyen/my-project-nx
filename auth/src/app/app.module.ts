@@ -1,11 +1,10 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {RouterModule} from '@angular/router';
+import {AppComponent} from './app.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
@@ -22,9 +21,6 @@ import { LoginComponent } from './login/login.component';
     ),
   ],
   providers: [],
-  bootstrap: [AppComponent],
-  exports: [
-    LoginComponent
-  ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

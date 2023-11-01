@@ -10,4 +10,9 @@ export const appRoutes: Route[] = [
     path: '',
     component: NxWelcomeComponent,
   },
+  {
+    path:'',
+    pathMatch: 'full',
+    redirectTo:'/auth/login'
+  }
 ];
