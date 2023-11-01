@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
@@ -17,10 +18,13 @@ import { AppComponent } from './app.component';
             ),
         },
       ],
-      { initialNavigation: 'enabledBlocking' }
+      {initialNavigation: 'enabledBlocking'}
     ),
   ],
   providers: [],
   bootstrap: [AppComponent],
+  exports: [
+    LoginComponent
+  ]
 })
 export class AppModule {}
