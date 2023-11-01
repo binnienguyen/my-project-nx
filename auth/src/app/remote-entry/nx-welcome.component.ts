@@ -423,12 +423,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
             Welcome auth 👋
           </h1>
         </div>
-        <!--  HERO  -->
-
-        <!--  MIDDLE CONTENT  -->
-
-        <!--  COMMANDS  -->
-
+        <my-project-login> </my-project-login>
       </div>
     </div>
   `,
