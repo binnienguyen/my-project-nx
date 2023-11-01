@@ -5,7 +5,6 @@ export const appRoutes: Route[] = [
   {
     path: 'auth',
     loadChildren: () => import('auth/Module').then((m) => m.RemoteEntryModule),
-    redirectTo:'auth/login'
   },
   {
     path: '',
