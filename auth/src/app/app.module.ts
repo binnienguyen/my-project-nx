@@ -1,10 +1,11 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-import {RouterModule} from '@angular/router';
-import {AppComponent} from './app.component';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { AppComponent } from './app.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RegisterComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
@@ -17,10 +18,10 @@ import {AppComponent} from './app.component';
             ),
         },
       ],
-      {initialNavigation: 'enabledBlocking'}
+      { initialNavigation: 'enabledBlocking' }
     ),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
