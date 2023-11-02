@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup, NonNullableFormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'my-project-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.less'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LoginComponent {
   validateForm: FormGroup<{
