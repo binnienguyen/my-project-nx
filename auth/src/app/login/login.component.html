@@ -1,31 +1,35 @@
-<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()">
-  <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your username!">
-      <nz-input-group>
-        <span nz-icon nzType="user" nzTheme="outline"></span>
-        <span><input type="text" nz-input formControlName="userName" placeholder="Username" /></span>
-      </nz-input-group>
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-control nzErrorTip="Please input your Password!">
-      <nz-input-group>
-        <span nz-icon nzType="lock" nzTheme="outline"></span>
-        <input type="password" nz-input formControlName="password" placeholder="Password" />
-      </nz-input-group>
-    </nz-form-control>
-  </nz-form-item>
-  <div nz-row class="login-form-margin">
-    <div nz-col [nzSpan]="12">
-      <label nz-checkbox formControlName="remember">
-        <span>Remember me</span>
-      </label>
-    </div>
-    <div nz-col [nzSpan]="12">
-      <a class="login-form-forgot">Forgot password</a>
-    </div>
+<div class="parent">
+  <div class="child">
+    <form (ngSubmit)="submitForm()" [formGroup]="validateForm" class="login-form" nz-form>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your username!">
+          <nz-input-group>
+            <span nz-icon nzTheme="outline" nzType="user"></span>
+            <span><input formControlName="userName" nz-input placeholder="Username" type="text"/></span>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your Password!">
+          <nz-input-group>
+            <span nz-icon nzTheme="outline" nzType="lock"></span>
+            <input formControlName="password" nz-input placeholder="Password" type="password"/>
+          </nz-input-group>
+        </nz-form-control>
+      </nz-form-item>
+      <div class="login-form-margin" nz-row>
+        <div [nzSpan]="12" nz-col>
+          <label formControlName="remember" nz-checkbox>
+            <span>Remember me</span>
+          </label>
+        </div>
+        <div [nzSpan]="12" nz-col>
+          <a class="login-form-forgot">Forgot password</a>
+        </div>
+      </div>
+      <button [nzType]="'primary'" class="login-form-button login-form-margin" nz-button>Log in</button>
+      Or
+      <a href="auth/register">register now!</a>
+    </form>
   </div>
-  <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Log in</button>
-  Or
-  <a>register now!</a>
-</form>
+</div>
